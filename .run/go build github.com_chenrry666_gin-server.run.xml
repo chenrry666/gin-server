@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+    <configuration default="false" name="build" type="GoApplicationRunConfiguration" factoryName="Go Application">
+        <module name="gin-server"/>
+        <working_directory value="$PROJECT_DIR$/"/>
+        <go_parameters value="-i"/>
+        <kind value="DIRECTORY"/>
+        <filePath value="$PROJECT_DIR$/"/>
+        <package value="github.com/chenrry666/gin-server"/>
+        <directory value="$PROJECT_DIR$/"/>
+        <method v="2"/>
+    </configuration>
+</component>
