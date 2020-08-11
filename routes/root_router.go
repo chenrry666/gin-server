@@ -1,14 +1,25 @@
 package routes
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
-func Route(r *gin.Engine) {
-	r.GET("/", func(c *gin.Context) {
+type Routes struct {
+	Engine *gin.Engine
+}
+
+func (r *Routes) Route() *Routes {
+	r.Engine.GET("/", func(c *gin.Context) {
 		c.SecureJSON(http.StatusOK, gin.H{
 			"code": c.DefaultQuery("query", "none"),
 		})
 	})
+	return r
+}
+func (r *Routes) Static() *Routes {
+	r.Engine.Static("/public", "../public")
+	return r
+
 }
